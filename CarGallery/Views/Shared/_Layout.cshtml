@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CarGallery</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -25,7 +25,7 @@
                                 await Html.RenderPartialAsync("_MenuPesquisa");
                             }
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Fabricante" asp-action="Index">Fabricante</a>
+                                <a class="nav-link text-light" asp-area="" asp-controller="Fabricante" asp-action="Index">Fabricante</a>
                             </li>
 
                         </ul>
@@ -44,7 +44,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted bg-dark text-light">
         <div class="container">
             &copy; 2024 - CarGallery - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

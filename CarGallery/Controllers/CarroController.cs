@@ -1,6 +1,7 @@
 ﻿using CarGallery.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarGallery.Controllers
 {
@@ -14,6 +15,25 @@ namespace CarGallery.Controllers
             _context = context;
         }
 
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            // Lógica para recuperar os detalhes do carro com o ID fornecido
+            // Por exemplo:
+            var carro = await _context.Carros
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (carro == null)
+            {
+                return NotFound(); // Ou outra ação, como NotFound();
+            }
+
+            return View(carro); // Retorna a view Detail com o modelo do carro
+        }
+
 
         public IActionResult Create()
         {
@@ -23,6 +43,9 @@ namespace CarGallery.Controllers
 
             return View();
         }
+
+       
+
 
         [HttpPost]
         public IActionResult Create([FromForm] Carro carro, [Bind("idFabricante")] int idFabricante)
@@ -44,6 +67,8 @@ namespace CarGallery.Controllers
                 return View();
 
             }
+
+
 
             var fileName = image.FileName;
             var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagens_carros", image.FileName);

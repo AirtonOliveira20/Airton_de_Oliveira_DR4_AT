@@ -6,18 +6,18 @@
         <form asp-action="Login">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
+                <label asp-for="Email" class="control-label h1"></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
+                <label asp-for="Senha" class="control-label h1"></label>
                 <input asp-for="Senha" class="form-control" />
                 <span asp-validation-for="Senha" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Entrar" class="btn btn-primary" />
-                <a class="btn btn-outline-primary" href="/Account/Create" role="button">Criar Conta</a>
+                <a class="btn btn-primary" href="/Account/Create" role="button">Criar Conta</a>
 
             </div>
 

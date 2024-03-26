@@ -16,7 +16,7 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddDbContext<CarGalleryContext>(c =>
 {
-    var connection = "Data Source=(LocalDB)\\MSSQLLocalDB;Integrated Security=True; Initial Catalog=CarGalleryDatabase";
+    var connection = "Data Source=(LocalDB)\\MSSQLLocalDB;Integrated Security=True; Initial Catalog=CarGalleryDatabase1";
     c.UseSqlServer(connection);
 });
 

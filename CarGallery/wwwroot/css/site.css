@@ -18,5 +18,28 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
+    background-image: url("/css/carro3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.opacidade {
+    opacity: 0.8;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.textoBranco{
+    color: white;
+
+}
+
+.fundo {
+    background-color: #212529;
+    color: white;
+    opacity: 0.8;
 }

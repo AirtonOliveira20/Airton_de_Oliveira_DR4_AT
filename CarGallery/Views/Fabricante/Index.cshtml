@@ -7,25 +7,26 @@
 <h1>Fabricante</h1>
 
 <p>
-    <a asp-action="Create">Criar novo fabricante</a>
+    <a asp-action="Create"><button type="button" class="btn btn-primary">Criar novo fabricante</button></a>
     <br />
-    <a asp-action="Create" asp-controller="Carro">Adicionar Carro</a>
+    <br />
+    <a asp-action="Create" asp-controller="Carro"><button type="button" class="btn btn-primary">Adicionar Carro</button></a>
 </p>
-<table class="table">
+<table class = "table table-bordered ">
     <thead>
-        <tr>
+        <tr class="table-dark opacidade">
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descricao)
             </th>
-            <th></th>
+            <th>Opções</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+            <tr class="table-dark opacidade">
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
@@ -33,9 +34,9 @@
                 @Html.DisplayFor(modelItem => item.Descricao)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id"><button type="button" class="btn btn-primary">Edit</button></a> |
+                <a asp-action="Details" asp-route-id="@item.Id"><button type="button" class="btn btn-primary">Details</button></a> |
+                <a asp-action="Delete" asp-route-id="@item.Id"><button type="button" class="btn btn-primary">Delete</button></a>
             </td>
         </tr>
 }
